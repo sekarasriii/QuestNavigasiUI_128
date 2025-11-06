@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.compose.foundation.layout.Column
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,5 +36,7 @@ fun TampilData(
                     (id=R.color.teal_700)
                 )
             )
-        })
+        }){ isiRuang->
+        Column()
+    }
 }
