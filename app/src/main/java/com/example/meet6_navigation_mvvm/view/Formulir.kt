@@ -72,7 +72,7 @@ fun FormIsian(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         RadioButton(
                             selected = false,
-                            onClick = { item }
+                            onClick = {item}
                         )
                         Text(text = item)
                     }
