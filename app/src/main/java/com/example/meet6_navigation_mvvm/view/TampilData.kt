@@ -1,5 +1,6 @@
 package com.example.meet6_navigation_mvvm.view
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.ui.res.stringResource
@@ -12,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.res.dimensionResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,6 +40,15 @@ fun TampilData(
                 )
             )
         }){ isiRuang->
-        Column()
+        Column(
+            modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween
+        ){
+            Column(
+                modifier = Modifier.padding(dimensionResource(id=R.dimen.padding_medium)),
+                verticalArrangement = Arrangement.spacedBy(dimensionResource)
+                    (id = R.dimen.padding_small)
+            ){}
+        }
     }
 }
