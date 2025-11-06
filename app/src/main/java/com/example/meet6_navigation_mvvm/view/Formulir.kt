@@ -6,8 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import android.R.attr.title
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.compose.material3.SearchBarDefaults.colors
 
 @Composable
 fun FormIsian(
@@ -18,5 +21,6 @@ fun FormIsian(
         topBar = {
             title = {Text(text = stringResource(id= R.string.home),
                 color = Color.White)},
+            colors = TopAppBarDefaults.topAppBarColors(containerColor = colorResource(id = R.color.teal_700))
         }
 }
