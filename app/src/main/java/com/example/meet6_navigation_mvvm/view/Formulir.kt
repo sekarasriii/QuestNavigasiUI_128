@@ -24,6 +24,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.RadioButton
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.fillMaxWidth
 
 @Composable
 fun FormIsian(
@@ -92,6 +94,12 @@ fun FormIsian(
                 onValueChange = {},
             )
             Spacer(modifier = Modifier.height(30.dp))
+            Button(
+                modifier = Modifier.fillMaxWidth(1f),
+                onClick = OnSubmitBtnClick
+            ){
+                Text(stringResource(id = R.string.submit))
+            }
         }
     }
 }
