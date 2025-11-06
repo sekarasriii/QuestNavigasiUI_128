@@ -19,9 +19,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Meet6_navigation_mvvmTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                Scaffold(
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
+                    // Panggilan ke composable utama aplikasi
+                    DataApp(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
