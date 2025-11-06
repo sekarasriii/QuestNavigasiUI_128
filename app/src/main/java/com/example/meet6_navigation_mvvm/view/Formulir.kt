@@ -22,6 +22,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.RadioButton
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 
 @Composable
 fun FormIsian(
@@ -89,6 +91,7 @@ fun FormIsian(
                 label = { Text(text = "Alamat") },
                 onValueChange = {},
             )
+            Spacer(modifier = Modifier.height(30.dp))
         }
     }
 }
