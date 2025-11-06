@@ -18,6 +18,8 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.DividerDefaults.Thickness
 
 @Composable
 fun FormIsian(
@@ -47,5 +49,9 @@ fun FormIsian(
                 label = {Text(text = "Nama Lengkap")},
                 onValueChange = {},
             )
+            HorizontalDivider(modifier = Modifier
+                .padding(20.dp)
+                .width(250.dp), thickness = Thickness,color =
+                Color.Red)
         }
     }
