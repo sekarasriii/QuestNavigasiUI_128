@@ -10,7 +10,11 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
-import androidx.compose.material3.SearchBarDefaults.colors
+import androidx.compose.material3.TopAppBar
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.ui.Alignment
 
 @Composable
 fun FormIsian(
@@ -19,8 +23,16 @@ fun FormIsian(
 ) {
     Scaffold(modifier = Modifier,
         topBar = {
-            title = {Text(text = stringResource(id= R.string.home),
-                color = Color.White)},
-            colors = TopAppBarDefaults.topAppBarColors(containerColor = colorResource(id = R.color.teal_700))
+            TopAppBar(
+                title = {Text(stringResource(R.string.home),
+                    color = Color.White)},
+                colors = TopAppBarDefaults.topAppBarColors
+                    (colorResource(id = R.color.teal_700))
+            )
         }
-}
+    ){ isiRuang ->
+        Column(modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {)
+    }
