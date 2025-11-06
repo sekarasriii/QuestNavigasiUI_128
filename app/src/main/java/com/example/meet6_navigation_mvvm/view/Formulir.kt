@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.DividerDefaults.Thickness
+import androidx.compose.foundation.layout.Row
 
 @Composable
 fun FormIsian(
@@ -53,5 +54,11 @@ fun FormIsian(
                 .padding(20.dp)
                 .width(250.dp), thickness = Thickness,color =
                 Color.Red)
+            Row{
+                jenisK.forEach {
+                    item->
+                    Row(verticalAlignment = Alignment.CenterVertically)
+                }
+            }
         }
     }
